@@ -1,0 +1,147 @@
+.nav-bar {
+    background: rgb(44, 47, 51);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 100%;
+}
+
+
+.resize-navbar-btn {
+    height: 20px;
+    width: 20px;
+
+    top: 10%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 60%;
+    background: #97A9B4;
+    overflow: hidden;
+}
+
+.resize-icon {
+    top: 50%;
+    left: 50%;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+
+.navbar-minimised {
+    background: #000;
+}
+
+.navbar-extend {
+    background: #000;
+}
+
+.btn-btn {
+    height: 40px;
+    width: 40px;
+
+    border-radius: 60%;
+    background: #5663F7;
+    top: 50%;
+    left: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    &:hover {
+        border-radius: 30%;
+
+        .active-marq {
+            opacity: 1;
+            left: -14px;
+            top: -35px;
+            width: 8px;
+            height: 30px;
+
+            border-radius: 50%;
+            // border-top-right-radius: 50%;
+            // border-bottom-right-radius: 50%;
+
+            background: #FFFFFF;
+        }
+    }
+
+    &:hover~.btn-notice {
+        opacity: 0.8;
+    }
+
+    &:hover~.btn-notice .btn-notice-content {
+        top: -10px;
+        min-width: 25px;
+        min-height: 30px;
+        margin-left: 5px;
+    }
+    &:hover~.btn-notice .btn-notice-arrow {
+        height: 10px;
+        transform: rotate(45deg);
+    
+        transition: transform 300ms, height 300ms;
+    }
+}
+
+.navbar-btn-icon {
+    top: 50%;
+    left: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+}
+
+.active-marq {
+    opacity: 0;
+    position: relative;
+    left: -30px;
+    top: -35px;
+    width: 0px;
+    height: 0px;
+    border-radius: 0;
+    background: #FFFFFF;
+
+    transition: opacity 400ms, left 200ms, height 300ms;
+}
+
+
+.btn-notice {
+    position: relative;
+    min-width: 100px;
+    min-height:15px;
+    left: 100%;
+    top: -30px;
+    opacity: 0;
+}
+
+.btn-notice-arrow {
+    position: relative;
+    top: 9px;
+    background: #2C2F33;
+    width: 10px;
+    height: 0px;
+
+    transition: transform 500ms, height 300ms;
+}
+
+.btn-notice-content {
+    font-size: 20px;
+    font-family: "legend";
+    color: #5865F2;
+    border-radius: 10%;
+    position: relative;
+    top: -10px;
+    background: #000;
+    min-width: 50px;
+    min-height: 0;
+    margin-left: 5px;
+
+    transition: min-height 100ms, min-width 200ms;
+}
